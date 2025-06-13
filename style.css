@@ -1,0 +1,167 @@
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: rgb(255, 253, 223);
+  color: black;
+  text-align: center;
+  transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
+}
+
+.header {
+  background-color: yellow;
+  color: black;
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 60px;
+  font-weight: bold;
+  transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
+}
+.header a {
+  margin: 0;
+  font-size: 60px;
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+}
+
+.menu-icon {
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  padding-right: 40px;
+}
+
+/* 사이드바 */
+
+.main-content {
+  padding: 50px;
+  transition: color 0.4s ease-in-out;
+}
+
+/* 다크 모드 스타일 */
+body.theme-dark {
+  background-color: #ffe0fa;
+  color: rgb(0, 0, 0);
+}
+
+.header.theme-dark {
+  background-color: #ff02d9;
+  color: rgb(255, 255, 255);
+}
+
+.main-content.theme-dark {
+  color: white;
+}
+.menu-icon.theme-dark {
+  filter: brightness(0) invert(1); /* 흰색처럼 보이게 */
+}
+
+h1 {
+  color: #000000;
+  font-size: 60px;
+  margin-bottom: 50px;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 80px;
+  gap: 30px;
+}
+.section a {
+  color: #000000;
+  font-size: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 10px 0;
+}
+.section a:hover {
+  text-shadow: 0 0 10px #4b4b4b;
+  transform: scale(1.05);
+}
+
+/* About me */
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding: 40px 20px;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.about-image img {
+  width: 250px;
+  height: auto;
+  margin-right: 80px;
+}
+
+.about-text {
+  text-align: left;
+  font-size: 25px;
+  color: #000000;
+  line-height: 1.8;
+  max-width: 100%;
+}
+
+.about-text a {
+  color: #3399ff;
+  text-decoration: underline;
+}
+
+.projects {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+.project {
+  max-width: 350px;
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.project img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.project a {
+  display: block;
+  margin-top: 10px;
+  color: #000000;
+  font-weight: bold;
+  font-size: 1.1em;
+  text-decoration: none;
+  text-align: center;
+}
+.team-container img {
+  width: 150px;
+  height: auto;
+}
+.team-container h1 a {
+  text-decoration: none;
+  color: #000000;
+}
+/* 이미지 hover 시 확대 애니메이션 */
+.hover-zoom {
+  transform: scale(1.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* About me 이미지 hover 시 네온 확대 효과 */
+.about-image img {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.about-image img.hover-glow {
+  transform: scale(1.2);
+  box-shadow: 0 0 20px 8px rgba(255, 255, 255, 0);
+}
