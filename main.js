@@ -1,9 +1,9 @@
 document.addEventListener('DOMContentLoaded', function () {
   const starImg = document.getElementById('star-img')
   const header = document.querySelector('.header')
-  const typingText = document.getElementById('typing-text') // 타이핑할 위치
+  const typingText = document.getElementById('typing-text')
 
-  // ⭐ 테마 변경 기능
+  // 색변경
   if (starImg && header) {
     starImg.addEventListener('click', function () {
       document.body.classList.toggle('theme-dark')
@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
     })
   }
 
-  // ⭐ 타이핑 애니메이션
+  // 타이핑 애니메이션
   if (typingText) {
     const text = '조민정의 포트폴리오'
     let index = 0
@@ -21,15 +21,15 @@ document.addEventListener('DOMContentLoaded', function () {
       if (index < text.length) {
         typingText.textContent += text.charAt(index)
         index++
-        setTimeout(type, 150) // 타이핑 속도 조절
+        setTimeout(type, 150)
       }
     }
 
-    type() // 타이핑 시작
+    type()
   }
 })
 
-// ⭐ 프로젝트 이미지 확대 효과 (hover)
+// 프로젝트 이미지 확대
 document.addEventListener('DOMContentLoaded', function () {
   const projectImages = document.querySelectorAll('.project img')
 
@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function () {
     })
   })
 })
-// ⭐ aboutme.html 이미지 네온 확대 효과
+// 어바웃미 별 확대
 document.addEventListener('DOMContentLoaded', function () {
   const aboutImage = document.querySelector('.about-image img')
 
@@ -58,15 +58,15 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 })
 
-// ⭐ Hello world! 클릭 시 팝업 띄우고 이동 여부 확인
+//  팝업
 document.addEventListener('DOMContentLoaded', function () {
   const helloLink = document.getElementById('hello-link')
   if (helloLink) {
     helloLink.addEventListener('click', function (event) {
-      event.preventDefault() // 기본 링크 이동 막기
+      event.preventDefault()
       const confirmed = confirm('팀페이지로 이동하겠습니까?')
       if (confirmed) {
-        window.location.href = 'https://github.com/chomj0416'
+        window.location.href = 'https://fianl-team.vercel.app/'
       }
     })
   }
